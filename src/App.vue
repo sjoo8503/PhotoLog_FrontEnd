@@ -1,17 +1,14 @@
 <template>
-
   <nav class="navbar">
     <div class="navbar__logo">
-      <a>PhotoLog</a>
+      <a href="/">PhotoLog</a>
     </div>
     <div class="navbar__menu">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/settings">Settings</RouterLink>
+      <RouterLink to="/create">Create</RouterLink>
     </div>
   </nav>
-
-  <RouterView />
-
+  <RouterView></RouterView>
 </template>
 
 <script setup>
@@ -37,10 +34,14 @@ import { RouterLink, RouterView } from 'vue-router'
   font-style: italic;
 }
 
+.navbar__logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .navbar__menu * {
   font-size: 2rem;
   margin-left: 3rem;
-  /* text-transform: uppercase; */
   text-decoration: none;
   color: #fff;
 }

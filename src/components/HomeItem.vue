@@ -1,53 +1,29 @@
 <template>
   <div class="component">
-    <img class="component__img" src="../assets/img/cristian-castillo-73pyV0JJOmE-unsplash.jpg" alt="dog">
+    <img class="component__image" :src="photoLogsData.imageUrl" :alt="photoLogsData.title" />
     <div class="component__details">
-      <div class="component__author">
-        <p>Author: Cristian Castillo</p>
-      </div>
       <div class="component__title">
-        <p>Running Puppy</p>
+        <p>{{ photoLogsData.title }}</p>
       </div>
-      <div class="component__actions">
-        <p>Upsplash.com</p>
-        <a href="https://unsplash.com/photos/73pyV0JJOmE"></a>
-      </div>
-    </div>
-  </div>
-  <div class="component">
-    <img class="component__img" src="../assets/img/cristian-castillo-73pyV0JJOmE-unsplash.jpg" alt="dog">
-    <div class="component__details">
       <div class="component__author">
-        <p>Author: Cristian Castillo</p>
+        <p>{{ photoLogsData.author }}</p>
       </div>
-      <div class="component__title">
-        <p>Running Puppy</p>
-      </div>
-      <div class="component__actions">
-        <p>Upsplash.com</p>
-        <a href="https://unsplash.com/photos/73pyV0JJOmE"></a>
-      </div>
-    </div>
-  </div>
-  <div class="component">
-    <img class="component__img" src="../assets/img/cristian-castillo-73pyV0JJOmE-unsplash.jpg" alt="dog">
-    <div class="component__details">
-      <div class="component__author">
-        <p>Author: Cristian Castillo</p>
-      </div>
-      <div class="component__title">
-        <p>Running Puppy</p>
-      </div>
-      <div class="component__actions">
-        <p>Upsplash.com</p>
-        <a href="https://unsplash.com/photos/73pyV0JJOmE"></a>
+      <div class="component__source">
+        <a :href="photoLogsData.sourceLink">{{ photoLogsData.websiteName }}</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  data() {
+    return {
 
+    }
+  },
+  props: ["photoLogsData"],
+}
 </script>
 
 <style scoped>
